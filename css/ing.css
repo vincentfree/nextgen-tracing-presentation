@@ -1,0 +1,87 @@
+/* @theme ing */
+
+@import 'default';
+
+:root {
+    width: 1280px;
+    height: 720px;
+    --font-size-p: 30px;
+    --ing-orange: rgb(255, 98, 0);
+    --ing-light-grey: rgb(168, 168, 168);
+    --ing-mid-grey: rgb(105, 105, 105);
+    --ing-text: rgb(51, 51, 51);
+}
+
+section {
+    padding: 70px;
+    padding-bottom: auto;
+    margin: 0;
+    background-color: white;
+    justify-content: start;
+
+}
+
+h1 {
+    font-size: 36pt;
+    color: var(--ing-orange);
+
+}
+
+section.covercenter {
+    padding: 0;
+    padding-top: 5em;
+    margin: 0;
+}
+
+section.covercenter h1 {
+    font-style: bold;
+    background: var(--ing-orange);
+    display: block;
+    border-radius: 20px;
+    color: white;
+    margin-left: 100px;
+    margin-right: auto;
+    padding: 15px;
+    /* text-align: center; */
+}
+
+section.cover {
+    padding: 0;
+    padding-top: 5em;
+    margin: 0;
+}
+
+section.cover h1 {
+    font-style: bold;
+    background: var(--ing-orange);
+    display: block;
+    border-radius: 20px;
+    color: white;
+    margin-left: 100px;
+    margin-right: auto;
+    padding: 15px;
+}
+
+section.cover h2 {
+    font-style: bold;
+    background: var(--ing-orange);
+    display: block;
+    border-radius: 20px;
+    color: white;
+    margin-left: 150px;
+    margin-right: auto;
+    padding: 15px;
+    font-size: 26pt;
+}
+
+section.cover p {
+    display: block;
+    padding: 20px;
+    background: white;
+    font-size: 15pt;
+    text-align: center;
+    position: absolute;
+    border-radius: 0px 20px 0px 0px;
+    bottom: 0;
+    left: 0;
+}
