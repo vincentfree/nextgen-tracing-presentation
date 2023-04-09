@@ -37,8 +37,8 @@ What is a trace?
 
 # TracING @ ING
 
-* Started out as a Tibco library
-* Current version was created in **2017**
+- Started out as a Tibco library
+- Current version was created in **2017**
 
 ![](assets/TracING_01.png)
 
@@ -50,11 +50,27 @@ TracING started out as a Tibco specific library, It evolved into the current JVM
 This makes the current version 6 years old(the previous version redates my involvement with the product).
 -->
 
-
 ---
 
 # NextGen version of TracING
+
 ---
+![bg right:33%](assets/tools.jpg)
 
-# 
+# Migration phase
 
+- Interoperability between old and new
+  - update span ID's from UUID to the W3C trace-context standard
+
+<!--
+The old ID format was implemented before there was an official standard.
+-->
+
+- Backwards compatible with Jaeger Uber ID injecting/extraction 
+
+<!--
+The jaeger format was used in the old version of tracing. 
+With the new environment we are using the W3C standard.
+-->
+
+---
