@@ -31,7 +31,26 @@ Experience:
 
 What is a trace?
 
-![](assets/trace%20small.png)
+![](assets/tracing_example.png)
+
+---
+
+# Distributed Tracing
+
+What is a span context?
+
+![](assets/tracing_span_context.png)
+
+<!--
+The Span Context consists of a TraceID, SpanID and TraceFlags.
+
+type SpanContext struct {
+	traceID    TraceID [16]byte
+	spanID     SpanID [8]byte
+	traceFlags TraceFlags byte
+}
+
+-->
 
 ---
 
@@ -52,9 +71,52 @@ This makes the current version 6 years old(the previous version redates my invol
 
 ---
 
-# NextGen version of TracING
+# TracING @ ING
+
+![](assets/TracING_04.png)
 
 ---
+
+# TracING @ ING
+
+![](assets/TracING_03.png)
+
+---
+
+# TracING @ ING
+
+![](assets/TracING_02.png)
+
+---
+
+# NextGen version of TracING
+
+Grafana Tempo
+
+![](assets/trace.png)
+
+---
+
+# NextGen version of TracING
+
+- Open Telemetry
+- Feature rich
+  - Service graph
+  - Metric generator
+  - Node graph
+  - TraceQL
+- Known architecture
+  - Grafana Mimir
+
+---
+
+# Open Telemetry
+
+![bg right:70% fit](assets/otel_diagram.png)
+<!-- ![h:583](assets/otel-collector_1.png) -->
+
+---
+
 ![bg right:33%](assets/tools.jpg)
 
 # Migration phase
