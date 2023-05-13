@@ -215,18 +215,15 @@ java -jar myapp.jar
 
 # Nextgen TracING
 
-<!-- Own code example(Java/Kotlin vert.x?) -->
-
-> Example of our own code implementing OpenTelemetry in Vert.X(Kotlin)
+> Example of an application implementing OpenTelemetry in Vert.X (Kotlin)
 
 ```kotlin
-private fun openTelemetryConfig(version: String?): OpenTelemetrySdk {
+private fun openTelemetryConfig(version: String): OpenTelemetrySdk {
     val attributes = Attributes.builder()
         .put(AttributeKey.stringKey("squad.name"), "Cerebro")
         .put(ResourceAttributes.SERVICE_NAME, "Event-API")
         .put(ResourceAttributes.TELEMETRY_SDK_LANGUAGE, ResourceAttributes.TelemetrySdkLanguageValues.JAVA)
-    if (version != null)
-        attributes.put(ResourceAttributes.SERVICE_VERSION, version)
+        .put(ResourceAttributes.SERVICE_VERSION, version)
 
     val tracerProvider = SdkTracerProvider.builder()
         .setResource(
@@ -234,8 +231,9 @@ private fun openTelemetryConfig(version: String?): OpenTelemetrySdk {
                 Resource.create(attributes.build())
             )
         )
-        .addSpanProcessor(BatchSpanProcessor.builder(OtlpGrpcSpanExporter.builder().build()).build())
-        .build()
+        .addSpanProcessor(
+          BatchSpanProcessor.builder(OtlpGrpcSpanExporter.builder().build()).build()
+        ).build()
 
     return OpenTelemetrySdk.builder()
         .setTracerProvider(tracerProvider)
