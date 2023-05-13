@@ -27,22 +27,60 @@ h1 {
 
 }
 
-section.covercenter {
+section.questions {
     padding: 0;
-    padding-top: 5em;
+    padding-top: 20%;
     margin: 0;
+    align-items: center;
 }
 
-section.covercenter h1 {
+section.questions h1 {
     font-style: bold;
     background: var(--ing-orange);
-    display: block;
+    display: flex;
     border-radius: 20px;
     color: white;
-    margin-left: 100px;
-    margin-right: auto;
+    margin: auto;
     padding: 15px;
+    padding-left: 75px;
+    padding-right: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    font-size: 100px;
+    /* top: 60%; */
+    /* justify-content: center; */
     /* text-align: center; */
+    /* align-items: center; */
+}
+
+section.demo {
+    padding: 0;
+    padding-top: 20%;
+    margin: 0;
+    align-items: center;
+}
+
+section.demo h1 {
+    font-style: bold;
+    background: var(--ing-orange);
+    display: flex;
+    border-radius: 20px;
+    color: white;
+    margin: auto;
+    padding: 15px;
+    padding-left: 75px;
+    padding-right: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: -5%;
+    
+    font-size: 100px;
+    
+    /* top: 60%; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* align-items: center; */
 }
 
 section.cover {
@@ -84,4 +122,11 @@ section.cover p {
     border-radius: 0px 20px 0px 0px;
     bottom: 0;
     left: 0;
+}
+
+section.center_img img {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    /* margin-bottom: 160px; */
 }
