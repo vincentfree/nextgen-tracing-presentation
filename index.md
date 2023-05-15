@@ -42,19 +42,19 @@ GITEO: Global IT Engineering & Operations
 
 ---
 
-# Distributed Tracing
+# Distributed Tracing - What is a trace?
 
-What is a trace?
 
-![](assets/tracing_example.png)
+
+![bg 90%](assets/tracing_example_alpha.png)
 
 ---
 <!-- _class: center_img -->
-# Distributed Tracing
+# Distributed Tracing - What is span context?
 
-What is a span context?
 
-![](assets/tracing_span_context.png)
+
+![bg 95%](assets/tracing_span_context_alpha.png)
 
 <!--
 The Span Context consists of a TraceID, SpanID and TraceFlags.
