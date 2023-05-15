@@ -92,7 +92,7 @@ TracING started out as a Tibco specific library, It evolved into the current JVM
 -->
 
 <!--
-This makes the current version 6 years old(the previous version redates my involvement with the product).
+This makes the current version 6 years old(the previous version predates my involvement with the product).
 -->
 
 ---
@@ -200,8 +200,6 @@ example TraceQL:
 
 > JVM example
 
-
-
 Automatic application instrumentation
 
 ```shell
@@ -218,6 +216,44 @@ java -jar myapp.jar
   - Akka, **Spring**, **Kafka**, elasticsearch api client, gRPC, **Java runtime/platform**, **JAX-RS**, **Log4j/logback**, Netty, **Reactor**/RXJava, **Vert.X**, ZIO
 
 ---
+
+# Open Telemetry
+
+![bg right:70% fit](assets/otel_diagram.png)
+
+---
+
+![bg right:33%](assets/tools.jpg)
+
+# Migration phase
+
+- Interoperability between old and new
+  - update span ID's from UUID to the W3C trace-context standard
+- Use the opentelemetry collector over direct Kafka connections
+
+<!--
+The old ID format was implemented before there was an official standard.
+-->
+
+- Ensure backwards compatibility with Jaeger Uber trace ID injecting/extraction 
+
+<!--
+The jaeger format was used in the old version of tracing. 
+With the new environment we are using the W3C standard.
+-->
+
+---
+<!-- _class: demo -->
+
+# Demo
+
+---
+<!-- _class: questions -->
+
+# Questions
+
+---
+
 
 # Nextgen TracING
 
@@ -269,38 +305,3 @@ val vertxOptions = CerebroApp.vertxOptions(
 ```
 
 ---
-
-# Open Telemetry
-
-![bg right:70% fit](assets/otel_diagram.png)
-
----
-
-![bg right:33%](assets/tools.jpg)
-
-# Migration phase
-
-- Interoperability between old and new
-  - update span ID's from UUID to the W3C trace-context standard
-- Use the opentelemetry collector over direct Kafka connections
-
-<!--
-The old ID format was implemented before there was an official standard.
--->
-
-- Ensure backwards compatibility with Jaeger Uber trace ID injecting/extraction 
-
-<!--
-The jaeger format was used in the old version of tracing. 
-With the new environment we are using the W3C standard.
--->
-
----
-<!-- _class: demo -->
-
-# Demo
-
----
-<!-- _class: questions -->
-
-# Questions
