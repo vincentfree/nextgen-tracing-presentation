@@ -12,9 +12,9 @@ backgroundImage: url('assets/hero-background.svg')
 ## Our evolution to Open Telemetry with Grafana Tempo
 
 <!--
-Vragen:
- - Wie gebruikt er tracing?
- - ...
+Good afternoon everyone!
+
+I'm Vincent Free and I want to tell you something about TracING 2.0 and our evolution to Open Telemetry with Grafana Tempo!
 -->
 ---
 
@@ -44,27 +44,33 @@ GITEO: Global IT Engineering & Operations
 
 # Distributed Tracing - What is a trace?
 
-
-
 ![bg 90%](assets/tracing_example_alpha.png)
+
+<!--
+Lets first start with the basics, Distributed tracing is a concept that was first written about in a paper by Google called "dapper" which actually stands for brave in dutch.
+
+In distributed tracing you have two types of objects, the Trace and the Span.
+
+A Span contains all tracing information logged by an application from it's perspective. 
+
+When you connect multiple spans together you will eventually get a Trace which is the complete set of spans related together based on a unique Trace ID.
+-->
 
 ---
 <!-- _class: center_img -->
 # Distributed Tracing - What is span context?
 
-
-
 ![bg 95%](assets/tracing_span_context_alpha.png)
 
 <!--
-The Span Context consists of a TraceID, SpanID and TraceFlags.
+So how do these spans relate to each other? 
+By using and propagating span contexts.
 
-type SpanContext struct {
-	traceID    TraceID [16]byte
-	spanID     SpanID [8]byte
-	traceFlags TraceFlags byte
-}
+A Span context as an object contains references to itself and its parent span and a trace ID.
 
+Together a tracing system is able to build a accurate representation of what happened.
+
+Span contexts can be shared locally but you'll normally see that they are also shared over the network using network calls. This is called context propagation.
 -->
 
 ---
