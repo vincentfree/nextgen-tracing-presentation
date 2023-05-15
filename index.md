@@ -28,7 +28,7 @@ Tribe: GITEO
 Age: 36
 Experience:
   - Golang
-  - Kotlin
+  - Kotlin / Java
   - Containerization(k8s, swarm)
   - Observability
 ```
