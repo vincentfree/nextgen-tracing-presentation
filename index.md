@@ -254,6 +254,10 @@ With the new environment we are using the W3C standard.
 
 ---
 
+![bg 35%](assets/logo_alpha.png)
+
+---
+
 
 # Nextgen TracING
 
